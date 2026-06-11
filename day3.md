@@ -23,7 +23,11 @@
 -@Entity:
     .A java class that represents a database table
     .@Id to set a variable as the primary key for the database table
-    .@Generated Value --usually database generates the ids automatically
+    .@Generated Value(strategy=GenerationType.
+            AUTO - let hibernate decide how to do it
+            IDENTITY - id bigint incremented used in mysql
+            SEQUENCE - used in postrgress sql oracle
+            TABLE - stores a separate table for id )
 
 -Entity Relationship:
     .OneToOne
